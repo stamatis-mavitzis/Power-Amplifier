@@ -1,0 +1,43 @@
+# Power Amplifier Bill of Materials
+
+This BOM covers the complete stereo power-amplifier subsystem: two identical Class-AB amplifier channels and one shared main power supply. The STM32 speaker-protection controller and preamplifier are intentionally excluded.
+
+| Section | References | Qty | Value / Part | Description | Package / Type | Notes |
+|---|---|---:|---|---|---|---|
+| Power Amplifier Channels | C1 ×2 | 2 | 4.7 µF | Input coupling capacitor | Radial THT | 1 per channel |
+| Power Amplifier Channels | C2, C4, C6 ×2 | 6 | 100 pF / 50 V | C0G/NP0 compensation capacitor | Leaded THT | 3 per channel |
+| Power Amplifier Channels | C3, C5, C10, C11 ×2 | 8 | 100 µF / 63 V | Electrolytic capacitor | Radial THT | 4 per channel |
+| Power Amplifier Channels | C7, C8, C18 ×2 | 6 | 100 nF / 50 V | Decoupling / stability capacitor | Leaded THT | 3 per channel |
+| Power Amplifier Channels | D1 ×2 | 2 | Green LED | Status / bias indicator LED | 5 mm THT | 1 per channel |
+| Power Amplifier Channels | F1, F2 holders ×2 | 4 | 5 × 20 mm fuse holder | PCB fuse holder | THT | 2 per channel |
+| Power Amplifier Channels | F1, F2 fuses ×2 | 4 | 3 A / 250 V | Fast-acting cartridge fuse | 5 × 20 mm | 2 per channel |
+| Power Amplifier Channels | Q1, Q2, Q3, Q9 ×2 | 8 | BC546B | Small-signal NPN transistor | TO-92 THT | 4 per channel |
+| Power Amplifier Channels | Q4, Q6 ×2 | 4 | BD140-16 | PNP driver transistor | TO-126 THT | 2 per channel |
+| Power Amplifier Channels | Q5 ×2 | 2 | BD139-16 | NPN driver transistor | TO-126 THT | 1 per channel |
+| Power Amplifier Channels | Q7 ×2 | 2 | 2SA1943-O | PNP power output transistor | TO-3P(L) THT | 1 per channel |
+| Power Amplifier Channels | Q8 ×2 | 2 | 2SC5200-O | NPN power output transistor | TO-3P(L) THT | 1 per channel |
+| Power Amplifier Channels | R1, R3, R4, R16 ×2 | 8 | 1 kΩ | Metal-film resistor | Axial THT | 4 per channel |
+| Power Amplifier Channels | R2, R8 ×2 | 4 | 22 kΩ | Metal-film resistor | Axial THT | 2 per channel |
+| Power Amplifier Channels | R5 ×2 | 2 | 22 kΩ | Resistor | Axial THT | 1 per channel |
+| Power Amplifier Channels | R6, R7 ×2 | 4 | 560 Ω | Metal-film resistor | Axial THT | 2 per channel |
+| Power Amplifier Channels | R9, R10, R11 ×2 | 6 | 3.3 kΩ | Metal-film resistor | Axial THT | 3 per channel |
+| Power Amplifier Channels | R12 ×2 | 2 | 220 Ω | Metal-film resistor | Axial THT | 1 per channel |
+| Power Amplifier Channels | R13, R14 ×2 | 4 | 0.33 Ω / 3 W | Wirewound emitter resistor | Axial power THT | 2 per channel |
+| Power Amplifier Channels | R15 ×2 | 2 | 10 Ω / 2 W | Output stability resistor | Axial power THT | 1 per channel |
+| Power Amplifier Channels | VR1 ×2 | 2 | 2 kΩ | Bias adjustment trimmer | THT trimmer | 1 per channel |
+| Power Amplifier Channels | J1 ×2 | 2 | AUDIO IN | Audio input PCB connection | THT connection / pad | 1 per channel |
+| Power Amplifier Channels | J2 ×2 | 2 | GND | Ground PCB connection | THT connection / pad | 1 per channel |
+| Power Amplifier Channels | J3 ×2 | 2 | +V rail | Positive supply PCB connection | THT connection / pad | 1 per channel |
+| Power Amplifier Channels | J4 ×2 | 2 | -V rail | Negative supply PCB connection | THT connection / pad | 1 per channel |
+| Power Amplifier Channels | J5 ×2 | 2 | SPEAKER OUT | Speaker output PCB connection | THT connection / pad | 1 per channel |
+| Power Amplifier Channels | Jw1 ×2 | 2 | GND | Speaker / power ground PCB connection | THT connection / pad | 1 per channel |
+| Shared Power Supply | BR1 | 1 | KBPC3506WP | 35 A / 600 V single-phase bridge rectifier | D-34 style THT | Shared by both channels |
+| Shared Power Supply | C12, C13 | 2 | 100 nF / 50 V | Supply bypass capacitor | Leaded THT | Shared power supply |
+| Shared Power Supply | C14, C15, C16, C17 | 4 | 4700 µF / 63 V | Main reservoir capacitor | Snap-in electrolytic THT | 9400 µF per rail |
+| Shared Power Supply | J6 | 1 | AC / V+ | Transformer secondary connection | THT connection / pad | Shared power supply |
+| Shared Power Supply | J7 | 1 | COM | Transformer center-tap connection | THT connection / pad | Shared power supply |
+| Shared Power Supply | J8 | 1 | AC / V- | Transformer secondary connection | THT connection / pad | Shared power supply |
+| Shared Power Supply | J9 | 1 | GND | DC ground output connection | THT connection / pad | Shared power supply |
+| Shared Power Supply | J10 | 1 | +V DC | Positive DC rail output | THT connection / pad | Shared power supply |
+| Shared Power Supply | J11 | 1 | -V DC | Negative DC rail output | THT connection / pad | Shared power supply |
+| External Power | - | 1 | 24-0-24 VAC / ~300 VA | Toroidal mains transformer | Chassis mounted | Supplies both stereo channels |
