@@ -1678,38 +1678,59 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "FS24-1500-C2:FS24-1500-C2"
-			(pin_names
-				(offset 1.016)
-			)
+		(symbol "FS24-250-C2:FS24-250-C2"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "T"
-				(at -5.0839 15.2479 0)
+				(at 16.51 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left bottom)
+					(justify left top)
 				)
 			)
-			(property "Value" "FS24-1500-C2"
-				(at -5.0814 -17.7827 0)
+			(property "Value" "FS24-250-C2"
+				(at 16.51 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left bottom)
+					(justify left top)
 				)
 			)
-			(property "Footprint" "FS24-1500-C2:TRANSFORMER_FS24-1500-C2"
+			(property "Footprint" "FS24250C2"
+				(at 16.51 -94.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Datasheet" "https://componentsearchengine.com/Datasheets/1/FS24-250-C2.pdf"
+				(at 16.51 -194.92 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Description" "Power Transformers POWER XFMR 24 Vct @ 250 mA UL/cUL - Class 2/3, TUV, 115/230V SPLIT PACK PCB MOUNT / FS24-250-C2"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1718,11 +1739,10 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
 				)
 			)
-			(property "Datasheet" ""
-				(at 0 0 0)
+			(property "Height" "35.509"
+				(at 16.51 -394.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1730,10 +1750,11 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left top)
 				)
 			)
-			(property "Description" "Transformer, class 2/3, 8-pin, 36VA, 115/230V x 24VCT at 1.5A, 12V at 3.0A | Triad Magnetics FS24-1500-C2"
-				(at 0 0 0)
+			(property "Manufacturer_Name" "Triad Magnetics"
+				(at 16.51 -494.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1741,11 +1762,11 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
+					(justify left top)
 				)
 			)
-			(property "MF" "Triad Magnetics"
-				(at 0 0 0)
+			(property "Manufacturer_Part_Number" "FS24-250-C2"
+				(at 16.51 -594.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1753,11 +1774,11 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
+					(justify left top)
 				)
 			)
-			(property "Package" "None"
-				(at 0 0 0)
+			(property "Mouser Part Number" "553-FS24-250-C2"
+				(at 16.51 -694.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1765,11 +1786,11 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
+					(justify left top)
 				)
 			)
-			(property "Price" "None"
-				(at 0 0 0)
+			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Triad-Magnetics/FS24-250-C2?qs=b1anAsPanWyIB%2FMHAlknqw%3D%3D"
+				(at 16.51 -794.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1777,11 +1798,11 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
+					(justify left top)
 				)
 			)
-			(property "Check_prices" "https://www.snapeda.com/parts/FS24-1500-C2/Triad+Magnetics/view-part/?ref=eda"
-				(at 0 0 0)
+			(property "Arrow Part Number" ""
+				(at 16.51 -894.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1789,11 +1810,11 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
+					(justify left top)
 				)
 			)
-			(property "STANDARD" "Manufacturer Recommendations"
-				(at 0 0 0)
+			(property "Arrow Price/Stock" ""
+				(at 16.51 -994.92 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1801,470 +1822,161 @@
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
+					(justify left top)
 				)
 			)
-			(property "SnapEDA_Link" "https://www.snapeda.com/parts/FS24-1500-C2/Triad+Magnetics/view-part/?ref=snap"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(property "MP" "FS24-1500-C2"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=3214764&manufacturer=Triad Magnetics&part_name=FS24-1500-C2&search_term=None"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(property "Availability" "In Stock"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(property "MANUFACTURER" "Triad"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-				)
-			)
-			(symbol "FS24-1500-C2_0_0"
-				(circle
-					(center -3.048 11.43)
-					(radius 0.254)
+			(symbol "FS24-250-C2_1_1"
+				(rectangle
+					(start 5.08 2.54)
+					(end 15.24 -10.16)
 					(stroke
-						(width 0.508)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center -3.048 -3.81)
-					(radius 0.254)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.54 12.7)
-					(mid -1.2755 11.43)
-					(end -2.54 10.16)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.54 10.16)
-					(mid -1.2755 8.89)
-					(end -2.54 7.62)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.54 7.62)
-					(mid -1.2755 6.35)
-					(end -2.54 5.08)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.54 5.08)
-					(mid -1.2755 3.81)
-					(end -2.54 2.54)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.54 -2.54)
-					(mid -1.2755 -3.81)
-					(end -2.54 -5.08)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.54 -5.08)
-					(mid -1.2755 -6.35)
-					(end -2.54 -7.62)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.54 -7.62)
-					(mid -1.2755 -8.89)
-					(end -2.54 -10.16)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -2.54 -10.16)
-					(mid -1.2755 -11.43)
-					(end -2.54 -12.7)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 13.335) (xy -0.635 -13.335)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 13.335) (xy 0.635 -13.335)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 11.43)
-					(radius 0.254)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -3.81)
-					(radius 0.254)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 10.16)
-					(mid 1.2755 11.43)
-					(end 2.54 12.7)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 7.62)
-					(mid 1.2755 8.89)
-					(end 2.54 10.16)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 5.08)
-					(mid 1.2755 6.35)
-					(end 2.54 7.62)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 2.54)
-					(mid 1.2755 3.81)
-					(end 2.54 5.08)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 -5.08)
-					(mid 1.2755 -3.81)
-					(end 2.54 -2.54)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 -7.62)
-					(mid 1.2755 -6.35)
-					(end 2.54 -5.08)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 -10.16)
-					(mid 1.2755 -8.89)
-					(end 2.54 -7.62)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 2.54 -12.7)
-					(mid 1.2755 -11.43)
-					(end 2.54 -10.16)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(pin passive line
-					(at -7.62 12.7 0)
+					(at 0 0 0)
 					(length 5.08)
-					(name ""
+					(name "1"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "1"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at -7.62 2.54 0)
+					(at 0 -2.54 0)
 					(length 5.08)
-					(name ""
+					(name "2"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "2"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at -7.62 -2.54 0)
+					(at 0 -5.08 0)
 					(length 5.08)
-					(name ""
+					(name "3"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "3"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at -7.62 -12.7 0)
+					(at 0 -7.62 0)
 					(length 5.08)
-					(name ""
+					(name "4"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "4"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 7.62 12.7 180)
+					(at 20.32 0 180)
 					(length 5.08)
-					(name ""
+					(name "5"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "5"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 7.62 2.54 180)
+					(at 20.32 -2.54 180)
 					(length 5.08)
-					(name ""
+					(name "6"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "6"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 7.62 -2.54 180)
+					(at 20.32 -5.08 180)
 					(length 5.08)
-					(name ""
+					(name "7"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "7"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 7.62 -12.7 180)
+					(at 20.32 -7.62 180)
 					(length 5.08)
-					(name ""
+					(name "8"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
 					(number "8"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -4053,6 +3765,12 @@
 		(uuid "120a2c11-369a-4d83-b63d-5d638098a13e")
 	)
 	(junction
+		(at 45.72 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "15e90995-c0f9-4c71-8b20-b09429b35d1c")
+	)
+	(junction
 		(at 175.26 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4149,12 +3867,6 @@
 		(uuid "78968520-7b93-421f-aa52-c56c3eeecf6f")
 	)
 	(junction
-		(at 44.45 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7ce6ef98-b1aa-4d7a-b504-c874defd0016")
-	)
-	(junction
 		(at 151.13 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4177,6 +3889,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a82479e0-d146-47d1-9b79-7c886b13fdd9")
+	)
+	(junction
+		(at 44.45 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a96323ec-347d-4830-817d-d2f932b07b3d")
 	)
 	(junction
 		(at 76.2 138.43)
@@ -4220,12 +3938,6 @@
 		(color 0 0 0 0)
 		(uuid "f3f43367-7d3c-440f-9ae8-4fe11b09645d")
 	)
-	(junction
-		(at 45.72 25.4)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f792e50b-b4bd-4e61-8f88-9fbe49cf3ece")
-	)
 	(wire
 		(pts
 			(xy 27.94 135.89) (xy 27.94 134.62)
@@ -4248,6 +3960,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 33.02) (xy 44.45 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00adc1e1-1f35-4b06-9f82-ba3a7d4c463f")
+	)
+	(wire
+		(pts
 			(xy 147.32 33.02) (xy 152.4 33.02)
 		)
 		(stroke
@@ -4255,16 +3977,6 @@
 			(type default)
 		)
 		(uuid "01020eaf-5bab-4b89-a8e2-e7037deb25ee")
-	)
-	(wire
-		(pts
-			(xy 41.91 25.4) (xy 45.72 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "020808b1-ec96-4ad6-bd9a-3d5b3021dbdf")
 	)
 	(wire
 		(pts
@@ -4358,16 +4070,6 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 25.4) (xy 26.67 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "115a569c-012a-4a68-9ab3-ed0fc32a31d3")
-	)
-	(wire
-		(pts
 			(xy 62.23 33.02) (xy 85.09 33.02)
 		)
 		(stroke
@@ -4388,13 +4090,13 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 40.64) (xy 45.72 25.4)
+			(xy 41.91 25.4) (xy 45.72 25.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "154b5886-3b6f-441c-9408-e4c6cf16e344")
+		(uuid "1564616a-ed68-40bb-a8be-3a777be0d2f7")
 	)
 	(wire
 		(pts
@@ -4415,6 +4117,16 @@
 			(type default)
 		)
 		(uuid "1c07987b-0efc-4b6e-9919-af3e3848ae16")
+	)
+	(wire
+		(pts
+			(xy 21.59 25.4) (xy 20.32 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d122dd2-00bf-4ad9-ab1a-48d41edea7ef")
 	)
 	(wire
 		(pts
@@ -4515,6 +4227,16 @@
 			(type default)
 		)
 		(uuid "3a4fecbe-29ac-4f99-bccd-7484cbfb68fc")
+	)
+	(wire
+		(pts
+			(xy 21.59 38.1) (xy 21.59 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a52a411-c548-405b-b172-8ac533ae332d")
 	)
 	(wire
 		(pts
@@ -4638,6 +4360,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 38.1) (xy 44.45 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "532be594-e88d-43f5-b1bf-cdb3b8c73121")
+	)
+	(wire
+		(pts
 			(xy 86.36 101.6) (xy 81.28 101.6)
 		)
 		(stroke
@@ -4658,26 +4390,6 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 35.56) (xy 44.45 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c34e5a1-3f24-44df-a7f3-792de6c1f085")
-	)
-	(wire
-		(pts
-			(xy 44.45 35.56) (xy 44.45 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d2b9cf8-7075-4ee0-8f6f-9db34432322f")
-	)
-	(wire
-		(pts
 			(xy 138.43 33.02) (xy 137.16 33.02)
 		)
 		(stroke
@@ -4685,6 +4397,16 @@
 			(type default)
 		)
 		(uuid "5e184ae8-c7fa-4ffa-a33a-c41d380c1a0f")
+	)
+	(wire
+		(pts
+			(xy 21.59 30.48) (xy 21.59 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f12ec1a-d858-45c6-938f-628bd4afb228")
 	)
 	(wire
 		(pts
@@ -4725,16 +4447,6 @@
 			(type default)
 		)
 		(uuid "68102e06-cae0-49c7-a9f8-0fb7e56e3df0")
-	)
-	(wire
-		(pts
-			(xy 54.61 43.18) (xy 44.45 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c10367c-62dd-4dcb-85cb-0f92f51a0314")
 	)
 	(wire
 		(pts
@@ -4818,16 +4530,6 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 50.8) (xy 41.91 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81a69d32-61f7-4759-b998-7f391b4e4474")
-	)
-	(wire
-		(pts
 			(xy 33.02 127) (xy 27.94 127)
 		)
 		(stroke
@@ -4845,16 +4547,6 @@
 			(type default)
 		)
 		(uuid "84c28655-259a-44a0-9243-fd3c0c840b71")
-	)
-	(wire
-		(pts
-			(xy 45.72 25.4) (xy 54.61 25.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88a6f413-9334-44d0-94ce-6ef44e19b98a")
 	)
 	(wire
 		(pts
@@ -4895,6 +4587,16 @@
 			(type default)
 		)
 		(uuid "9225f0d1-53ec-42ca-b13d-b5c217d0e17a")
+	)
+	(wire
+		(pts
+			(xy 41.91 30.48) (xy 41.91 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "970b6f5d-41de-47f4-b2fd-783ac96998ad")
 	)
 	(wire
 		(pts
@@ -4988,6 +4690,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 25.4) (xy 54.61 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4b2d3c6-4e52-4809-bc1f-d9bbb10412b7")
+	)
+	(wire
+		(pts
 			(xy 27.94 170.18) (xy 27.94 168.91)
 		)
 		(stroke
@@ -4998,13 +4710,13 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 40.64) (xy 45.72 40.64)
+			(xy 41.91 35.56) (xy 45.72 35.56)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a577b7a9-a6ea-4006-9c82-bf69707a4040")
+		(uuid "a6f52d07-959d-4fdf-bde5-d355cc3f0f9c")
 	)
 	(wire
 		(pts
@@ -5058,6 +4770,16 @@
 	)
 	(wire
 		(pts
+			(xy 21.59 33.02) (xy 21.59 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1207f02-f6af-45c3-bedb-91d3dc9d82c8")
+	)
+	(wire
+		(pts
 			(xy 224.79 29.21) (xy 224.79 31.75)
 		)
 		(stroke
@@ -5078,6 +4800,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 40.64) (xy 54.61 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b896e0ca-8f7d-4fa9-b8b2-a7a3d0c7b0a9")
+	)
+	(wire
+		(pts
 			(xy 223.52 92.71) (xy 219.71 92.71)
 		)
 		(stroke
@@ -5085,6 +4817,16 @@
 			(type default)
 		)
 		(uuid "b9bd7dcd-dc05-4612-9da7-48e7b8dd44a6")
+	)
+	(wire
+		(pts
+			(xy 41.91 38.1) (xy 44.45 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9df475f-983b-4de3-8310-a8e5133940c6")
 	)
 	(wire
 		(pts
@@ -5138,13 +4880,23 @@
 	)
 	(wire
 		(pts
-			(xy 26.67 35.56) (xy 26.67 40.64)
+			(xy 41.91 33.02) (xy 44.45 33.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c4be3732-b8dd-4882-83c6-cdeda8a946ba")
+		(uuid "cdb66b16-f56c-49a0-b5b2-d20d5ffd52d1")
+	)
+	(wire
+		(pts
+			(xy 21.59 50.8) (xy 20.32 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf43a323-ec35-4f2f-b1be-2fce8232b971")
 	)
 	(wire
 		(pts
@@ -5175,16 +4927,6 @@
 			(type default)
 		)
 		(uuid "d5499727-49c6-49fc-9c34-e26380b07af4")
-	)
-	(wire
-		(pts
-			(xy 20.32 50.8) (xy 26.67 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd12332b-de38-4b17-b897-a8b96164f2d3")
 	)
 	(wire
 		(pts
@@ -5308,16 +5050,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 40.64) (xy 54.61 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f196e7f8-53bb-4229-bd17-983ad9b3e382")
-	)
-	(wire
-		(pts
 			(xy 240.03 22.86) (xy 240.03 19.05)
 		)
 		(stroke
@@ -5378,13 +5110,13 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 43.18) (xy 44.45 50.8)
+			(xy 45.72 35.56) (xy 45.72 25.4)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ffb537a9-7541-4f5e-9b3f-4fd3be089226")
+		(uuid "fd7ac2d4-6421-4d74-8f3d-d8aba0d80487")
 	)
 	(global_label "TEMP2_ADC"
 		(shape input)
@@ -7551,6 +7283,190 @@
 			(project "STM32 Speaker Protection Controller"
 				(path "/d20b905a-7db7-4b98-afc2-88ae14a7e1a7"
 					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "FS24-250-C2:FS24-250-C2")
+		(at 21.59 30.48 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3a62d9a3-534c-49b5-ad82-718aac73af1d")
+		(property "Reference" "T1"
+			(at 31.75 22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "FS24-250-C2"
+			(at 31.75 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "FS24250C2"
+			(at 38.1 125.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://componentsearchengine.com/Datasheets/1/FS24-250-C2.pdf"
+			(at 38.1 225.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "Power Transformers POWER XFMR 24 Vct @ 250 mA UL/cUL - Class 2/3, TUV, 115/230V SPLIT PACK PCB MOUNT / FS24-250-C2"
+			(at 21.59 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "35.509"
+			(at 38.1 425.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Triad Magnetics"
+			(at 38.1 525.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "FS24-250-C2"
+			(at 38.1 625.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "553-FS24-250-C2"
+			(at 38.1 725.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Triad-Magnetics/FS24-250-C2?qs=b1anAsPanWyIB%2FMHAlknqw%3D%3D"
+			(at 38.1 825.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 38.1 925.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 38.1 1025.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "5"
+			(uuid "489985b2-aa10-4093-8420-21907c72ec5f")
+		)
+		(pin "6"
+			(uuid "2df36f00-111d-401b-9e3a-7c7c7e8746d2")
+		)
+		(pin "2"
+			(uuid "780c988c-32ae-4bde-b42a-f374fffcd3fa")
+		)
+		(pin "1"
+			(uuid "cf99eb57-1cd4-4191-89c5-afa4d134d4eb")
+		)
+		(pin "7"
+			(uuid "615a1227-4acb-4759-add1-8e7bbb75c386")
+		)
+		(pin "8"
+			(uuid "02d1f8de-8a80-4ab1-8e86-26992a991a23")
+		)
+		(pin "4"
+			(uuid "f8230d32-6225-4bb2-870d-4aee9ac36581")
+		)
+		(pin "3"
+			(uuid "d3eb9614-06d9-4e99-b032-9e24eeb417e2")
+		)
+		(instances
+			(project "STM32 Speaker Protection Controller"
+				(path "/d20b905a-7db7-4b98-afc2-88ae14a7e1a7"
+					(reference "T1")
 					(unit 1)
 				)
 			)
@@ -11618,226 +11534,6 @@
 			(project "STM32 Speaker Protection Controller"
 				(path "/d20b905a-7db7-4b98-afc2-88ae14a7e1a7"
 					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "FS24-1500-C2:FS24-1500-C2")
-		(at 34.29 38.1 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b20ef277-592c-47b8-8a18-82d5d2634fda")
-		(property "Reference" "T1"
-			(at 34.036 20.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "FS24-1500-C2"
-			(at 34.036 22.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "FS24-1500-C2:TRANSFORMER_FS24-1500-C2"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Datasheet" ""
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Transformer, class 2/3, 8-pin, 36VA, 115/230V x 24VCT at 1.5A, 12V at 3.0A | Triad Magnetics FS24-1500-C2"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MF" "Triad Magnetics"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Package" "None"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Price" "None"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Check_prices" "https://www.snapeda.com/parts/FS24-1500-C2/Triad+Magnetics/view-part/?ref=eda"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "STANDARD" "Manufacturer Recommendations"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/FS24-1500-C2/Triad+Magnetics/view-part/?ref=snap"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MP" "FS24-1500-C2"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=3214764&manufacturer=Triad Magnetics&part_name=FS24-1500-C2&search_term=None"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Availability" "In Stock"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MANUFACTURER" "Triad"
-			(at 34.29 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(pin "6"
-			(uuid "dc66218e-42d1-4209-88d7-bd5bf3d16ebd")
-		)
-		(pin "8"
-			(uuid "93995f82-631b-4e1a-9a47-c5a3a1b31bed")
-		)
-		(pin "2"
-			(uuid "7e8cd7e8-0c8b-4fad-9957-9c570f125398")
-		)
-		(pin "1"
-			(uuid "23e9bc53-1449-4b89-a5ee-f5a0ee776a84")
-		)
-		(pin "7"
-			(uuid "495aee79-0246-4104-adb9-087ea0b7e0b2")
-		)
-		(pin "3"
-			(uuid "e7855bca-9458-4186-afb2-2baea018e65a")
-		)
-		(pin "5"
-			(uuid "2d48d844-94cf-4481-8587-7c550e54ef02")
-		)
-		(pin "4"
-			(uuid "6f79f357-ac50-4f83-a366-bed28ad2e82d")
-		)
-		(instances
-			(project "STM32 Speaker Protection Controller"
-				(path "/d20b905a-7db7-4b98-afc2-88ae14a7e1a7"
-					(reference "T1")
 					(unit 1)
 				)
 			)

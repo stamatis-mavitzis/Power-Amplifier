@@ -4,4 +4,5 @@
 	(lib (name "FS24-1500-C2") (type "KiCad") (uri "C:/Users/stamo/OneDrive/Έγγραφα/KiCad/10.0/Custom Libraries/FS24-1500-C2.pretty/FS24-1500-C2.pretty") (options "") (descr ""))
 	(lib (name "footprints") (type "KiCad") (uri "C:/Users/stamo/OneDrive/Έγγραφα/KiCad/10.0/Custom Libraries/G2RL-1A-E-DC12/footprints.pretty") (options "") (descr ""))
 	(lib (name "G2RL-1A-E-DC12_CORRECT") (type "KiCad") (uri "C:/Users/stamo/OneDrive/Έγγραφα/KiCad/10.0/Custom Libraries/G2RL-1A-E-DC12_CORRECT.pretty") (options "") (descr ""))
+	(lib (name "FS24-250-C2") (type "KiCad") (uri "C:/Users/stamo/OneDrive/Έγγραφα/KiCad/10.0/Custom Libraries/FS24-250-C2/FS24-250-C2.pretty") (options "") (descr ""))
 )
