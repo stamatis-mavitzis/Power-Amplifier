@@ -1,32 +1,38 @@
-"Reference","Qty","Value","Footprint","Description"
-"BR1","1","Diotec KBPC3506WP","Diode_THT:Diode_Bridge_28.6x28.6x7.3mm_P18.0mm_P11.6mm","Glass Passivated Single-Phase Bridge Rectifier, 70V Vrms, 1.5A If, WOG package"
-"C1","1","4.7u","Capacitor_THT:CP_Radial_D10.0mm_P3.50mm","Polarized capacitor"
-"C2,C4,C6","3","100p","Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm","Unpolarized capacitor"
-"C3,C5,C10,C11","4","100u","Capacitor_THT:CP_Radial_D13.0mm_P5.00mm","Polarized capacitor"
-"C7,C8,C18","3","100n","Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm","Unpolarized capacitor"
-"C12,C13","2","100n","Capacitor_THT:CP_Radial_D10.0mm_P2.50mm","Unpolarized capacitor"
-"C14,C15,C16,C17","4","4700u","Capacitor_THT:CP_Radial_D25.0mm_P10.00mm_SnapIn","Polarized capacitor"
-"D1","1","LED","LED_THT:LED_D5.0mm","Light emitting diode"
-"F1,F2","2","3A","Fuse:Fuseholder_Cylinder-5x20mm_Stelvio-Kontek_PTF78_Horizontal_Open","Fuse"
-"J1","1","AUDIO IN","Connector_Wire:SolderWire-6sqmm_1x01_D3.5mm_OD7mm","Generic connector, single row, 01x01, script generated"
-"J2,Jw1","2","GND","Connector_Wire:SolderWire-6sqmm_1x01_D3.5mm_OD7mm","Generic connector, single row, 01x01, script generated"
-"J3,J10","2","+35V","Connector_Wire:SolderWire-0.127sqmm_1x01_D0.48mm_OD1mm","Generic connector, single row, 01x01, script generated"
-"J4,J11","2","-35V","Connector_Wire:SolderWire-0.127sqmm_1x01_D0.48mm_OD1mm","Generic connector, single row, 01x01, script generated"
-"J5","1","SPEAKER OUT","Connector_Wire:SolderWire-6sqmm_1x01_D3.5mm_OD7mm","Generic connector, single row, 01x01, script generated"
-"J6","1","V+","Connector_Wire:SolderWire-6sqmm_1x01_D3.5mm_OD7mm","Generic connector, single row, 01x01, script generated"
-"J7","1","COM","Connector_Wire:SolderWire-6sqmm_1x01_D3.5mm_OD7mm","Generic connector, single row, 01x01, script generated"
-"J8","1","V-","Connector_Wire:SolderWire-6sqmm_1x01_D3.5mm_OD7mm","Generic connector, single row, 01x01, script generated"
-"J9","1","GND","Connector_Wire:SolderWire-0.127sqmm_1x01_D0.48mm_OD1mm","Generic connector, single row, 01x01, script generated"
-"Q1,Q2,Q3,Q9","4","BC546","Package_TO_SOT_THT:TO-92_Inline","0.1A Ic, 65V Vce, Small Signal NPN Transistor, TO-92"
-"Q4,Q6","2","BD140 MJE15035","Package_TO_SOT_THT:TO-126-3_Vertical","1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126"
-"Q5","1","BD139 MJE15034","Package_TO_SOT_THT:TO-126-3_Vertical","1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126"
-"Q7","1","2SA1943-O","Package_TO_SOT_THT:TO-3P-3_Vertical","PNP transistor, base/collector/emitter"
-"Q8","1","2SC5200-O","Package_TO_SOT_THT:TO-3P-3_Vertical","NPN transistor, base/collector/emitter"
-"R1,R3,R4,R16","4","1K","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","Resistor, US symbol"
-"R2,R5,R8","3","22K","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","Resistor, US symbol"
-"R6,R7","2","560","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","Resistor, US symbol"
-"R9,R10,R11","3","3K3","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","Resistor, US symbol"
-"R12","1","220","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal","Resistor, US symbol"
-"R13,R14","2","0R33","Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal","Resistor, US symbol"
-"R15","1","10","Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal","Resistor, US symbol"
-"VR1","1","2K","Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical","Trim-potentiometer, US symbol"
+﻿Section,References,Quantity,Value / Part,Description,Package / Type,Notes
+Power Amplifier Channels,C1 ×2,2,4.7 µF,Input coupling capacitor,Radial THT,1 per channel
+Power Amplifier Channels,"C2, C4, C6 ×2",6,100 pF / 50 V,C0G/NP0 compensation capacitor,Leaded THT,3 per channel
+Power Amplifier Channels,"C3, C5, C10, C11 ×2",8,100 µF / 63 V,Electrolytic capacitor,Radial THT,4 per channel
+Power Amplifier Channels,"C7, C8, C18 ×2",6,100 nF / 50 V,Decoupling / stability capacitor,Leaded THT,3 per channel
+Power Amplifier Channels,D1 ×2,2,Green LED,Status / bias indicator LED,5 mm THT,1 per channel
+Power Amplifier Channels,"F1, F2 holders ×2",4,5 × 20 mm fuse holder,PCB fuse holder,THT,2 per channel
+Power Amplifier Channels,"F1, F2 fuses ×2",4,3 A / 250 V,Fast-acting cartridge fuse,5 × 20 mm,2 per channel
+Power Amplifier Channels,"Q1, Q2, Q3, Q9 ×2",8,BC546B,Small-signal NPN transistor,TO-92 THT,4 per channel
+Power Amplifier Channels,"Q4, Q6 ×2",4,BD140-16,PNP driver transistor,TO-126 THT,2 per channel
+Power Amplifier Channels,Q5 ×2,2,BD139-16,NPN driver transistor,TO-126 THT,1 per channel
+Power Amplifier Channels,Q7 ×2,2,2SA1943-O,PNP power output transistor,TO-3P(L) THT,1 per channel
+Power Amplifier Channels,Q8 ×2,2,2SC5200-O,NPN power output transistor,TO-3P(L) THT,1 per channel
+Power Amplifier Channels,"R1, R3, R4, R16 ×2",8,1 kΩ,Metal-film resistor,Axial THT,4 per channel
+Power Amplifier Channels,"R2, R8 ×2",4,22 kΩ,Metal-film resistor,Axial THT,2 per channel
+Power Amplifier Channels,R5 ×2,2,22 kΩ,Resistor,Axial THT,1 per channel
+Power Amplifier Channels,"R6, R7 ×2",4,560 Ω,Metal-film resistor,Axial THT,2 per channel
+Power Amplifier Channels,"R9, R10, R11 ×2",6,3.3 kΩ,Metal-film resistor,Axial THT,3 per channel
+Power Amplifier Channels,R12 ×2,2,220 Ω,Metal-film resistor,Axial THT,1 per channel
+Power Amplifier Channels,"R13, R14 ×2",4,0.33 Ω / 3 W,Wirewound emitter resistor,Axial power THT,2 per channel
+Power Amplifier Channels,R15 ×2,2,10 Ω / 2 W,Output stability resistor,Axial power THT,1 per channel
+Power Amplifier Channels,VR1 ×2,2,2 kΩ,Bias adjustment trimmer,THT trimmer,1 per channel
+Power Amplifier Channels,J1 ×2,2,AUDIO IN,Audio input PCB connection,THT connection / pad,1 per channel
+Power Amplifier Channels,J2 ×2,2,GND,Ground PCB connection,THT connection / pad,1 per channel
+Power Amplifier Channels,J3 ×2,2,+V rail,Positive supply PCB connection,THT connection / pad,1 per channel
+Power Amplifier Channels,J4 ×2,2,-V rail,Negative supply PCB connection,THT connection / pad,1 per channel
+Power Amplifier Channels,J5 ×2,2,SPEAKER OUT,Speaker output PCB connection,THT connection / pad,1 per channel
+Power Amplifier Channels,Jw1 ×2,2,GND,Speaker / power ground PCB connection,THT connection / pad,1 per channel
+Shared Power Supply,BR1,1,KBPC3506WP,35 A / 600 V single-phase bridge rectifier,D-34 style THT,Shared by both channels
+Shared Power Supply,"C12, C13",2,100 nF / 50 V,Supply bypass capacitor,Leaded THT,Shared power supply
+Shared Power Supply,"C14, C15, C16, C17",4,4700 µF / 63 V,Main reservoir capacitor,Snap-in electrolytic THT,9400 µF per rail
+Shared Power Supply,J6,1,AC / V+,Transformer secondary connection,THT connection / pad,Shared power supply
+Shared Power Supply,J7,1,COM,Transformer center-tap connection,THT connection / pad,Shared power supply
+Shared Power Supply,J8,1,AC / V-,Transformer secondary connection,THT connection / pad,Shared power supply
+Shared Power Supply,J9,1,GND,DC ground output connection,THT connection / pad,Shared power supply
+Shared Power Supply,J10,1,+V DC,Positive DC rail output,THT connection / pad,Shared power supply
+Shared Power Supply,J11,1,-V DC,Negative DC rail output,THT connection / pad,Shared power supply
+External Power,-,1,24-0-24 VAC / ~300 VA,Toroidal mains transformer,Chassis mounted,Supplies both stereo channels
