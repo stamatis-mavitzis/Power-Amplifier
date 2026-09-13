@@ -7340,7 +7340,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_Power_L25.0mm_W9.0mm_P30.48mm"
 			(at 151.384 120.396 90)
 			(hide yes)
 			(show_name no)
@@ -8042,7 +8042,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0516_L15.5mm_D5.0mm_P20.32mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_Power_L25.0mm_W9.0mm_P30.48mm"
 			(at 151.384 98.806 90)
 			(hide yes)
 			(show_name no)
