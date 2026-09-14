@@ -4,7 +4,7 @@ This BOM covers the complete stereo power-amplifier PCB subsystem: two identical
 
 > **Final resistor specification:** all ordinary amplifier resistors are **1% metal-film, 0.5 W** unless explicitly stated otherwise. **R13/R14 are 0.33 Ω, 5 W, 1% wirewound**, and **R15 is 10 Ω, 0.5 W, 1%**.
 
-> **Latest component selections carried over from the final Mouser BOM:** NJW0302G / NJW0281G output pair, Hammond 1182S24 500 VA transformer, 4.7 µF / 400 V C1, and 4700 µF / 50 V reservoir capacitors.
+> **Latest component selections carried over from the final Mouser BOM:** MJL21193G / MJL21194G output pair, Hammond 1182S24 500 VA transformer, 4.7 µF / 400 V C1, and 4700 µF / 50 V reservoir capacitors.
 
 | Section | References | Qty | Value / Part | Description | Package / Type | Notes |
 |---|---|---|---|---|---|---|
@@ -18,8 +18,8 @@ This BOM covers the complete stereo power-amplifier PCB subsystem: two identical
 | Power Amplifier Channels | Q1, Q2, Q3, Q9 ×2 | 8 | BC546B | Small-signal NPN transistor | TO-92 THT | 4 per channel |
 | Power Amplifier Channels | Q4, Q6 ×2 | 4 | BD140-16 | PNP driver transistor | TO-126 THT | 2 per channel |
 | Power Amplifier Channels | Q5 ×2 | 2 | BD139-16 | NPN driver transistor | TO-126 THT | 1 per channel |
-| Power Amplifier Channels | Q7 ×2 | 2 | NJW0302G | PNP power output transistor, 150 W | TO-3P THT | 1 per channel; Mouser 863-NJW0302G |
-| Power Amplifier Channels | Q8 ×2 | 2 | NJW0281G | NPN power output transistor, 150 W | TO-3P THT | 1 per channel; Mouser 863-NJW0281G |
+| Power Amplifier Channels | Q7 ×2 | 2 | MJL21193G | PNP power output transistor, 200 W | TO-264-3 THT | 1 per channel; Mouser 863-MJL21193G |
+| Power Amplifier Channels | Q8 ×2 | 2 | MJL21194G | NPN power output transistor, 200 W | TO-264-3 THT | 1 per channel; Mouser 863-MJL21194G |
 | Power Amplifier Channels | R1, R3, R4, R16 ×2 | 8 | 1 kΩ / 0.5 W / 1% | Metal-film resistor | Axial THT | 4 per channel; MFR50 series |
 | Power Amplifier Channels | R2, R8 ×2 | 4 | 22 kΩ / 0.5 W / 1% | Metal-film resistor | Axial THT | 2 per channel; MFR50 series |
 | Power Amplifier Channels | R5 ×2 | 2 | 22 kΩ / 0.5 W / 1% | Metal-film resistor | Axial THT | 1 per channel; MFR50 series |
