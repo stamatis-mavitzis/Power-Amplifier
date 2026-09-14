@@ -1,0 +1,22 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "343222dd-4bcc-4b97-8243-11cd1d00bcb6")
+	(paper "A4")
+	(title_block
+		(title "Hi-Fi Power Amplifier Circuit")
+		(date "06-Sep-2026")
+		(rev "1")
+		(company "Stamtios Mavitzis")
+		(comment 1 "Electrical & Computer Engineering")
+		(comment 2 "https://sound-au.com/project3a.htm")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
