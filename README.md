@@ -2,7 +2,7 @@
 
 # Hi‑Fi Class‑AB Power Amplifier
 
-### Completed discrete stereo power amplifier engineering release with STM32 speaker protection, thermal monitoring, firmware, BOM, and production-ready KiCad files
+### Discrete stereo power amplifier with STM32 speaker protection, thermal monitoring, firmware, BOM, and production-ready KiCad files
 
 **KiCad · Discrete Class‑AB · ±32 V Rails · STM32G031K8 · Speaker Protection · Thermal Monitoring**
 
@@ -10,9 +10,6 @@
 ![Topology](https://img.shields.io/badge/Topology-Class--AB-444444?style=flat-square)
 ![MCU](https://img.shields.io/badge/MCU-STM32G031K8-03234B?style=flat-square)
 ![Supply](https://img.shields.io/badge/Main%20Rails-%C2%B132%20V-555555?style=flat-square)
-![Project](https://img.shields.io/badge/Project-Complete-success?style=flat-square)
-![Firmware](https://img.shields.io/badge/Firmware-Complete-success?style=flat-square)
-![Manufacturing](https://img.shields.io/badge/Manufacturing%20Package-Complete-success?style=flat-square)
 
 </div>
 
@@ -20,13 +17,13 @@
 
 ## Overview
 
-This repository contains the **completed engineering release** of a two-channel discrete **Hi‑Fi Class‑AB power amplifier** developed in **KiCad**.
+This repository contains the engineering design of a two-channel discrete **Hi‑Fi Class‑AB power amplifier** developed in **KiCad**.
 
-The power-amplifier stage is based on the design principles of **Rod Elliott's ESP Project 3A**, while this implementation expands the reference design into a complete stereo system with custom PCB layouts, a dual-transformer power architecture, an independent preamplifier schematic, updated production components, thermal management, and a dedicated **STM32-based speaker protection controller**.
+The power-amplifier stage is based on the design principles of **Rod Elliott's ESP Project 3A**, while this implementation expands the reference design into a complete stereo system with custom PCB layouts, a dual-transformer power architecture, updated production components, thermal management, and a dedicated **STM32-based speaker protection controller**.
 
 The repository covers the complete design-to-fabrication workflow:
 
-- stereo power-amplifier, power-supply, preamplifier, and protection schematics;
+- stereo power-amplifier, power-supply, and protection schematics;
 - STM32 protection firmware and source structure;
 - finalized PCB layouts and grounding strategy;
 - verified component/footprint assignments;
@@ -34,8 +31,6 @@ The repository covers the complete design-to-fabrication workflow:
 - thermal and mechanical integration planning;
 - Gerber and PTH/NPTH drill generation;
 - fabrication, assembly, testing, and safety documentation.
-
-> **Project status:** **complete engineering release** — schematic capture, PCB design, firmware, BOM, manufacturing outputs, and project documentation are finalized. Quantitative audio measurements are intentionally not invented in this README and should be added only from documented bench measurements.
 
 ---
 
@@ -46,7 +41,6 @@ The repository covers the complete design-to-fabrication workflow:
 - [System Architecture](#system-architecture)
 - [Power Amplifier](#power-amplifier)
 - [Power Supply](#power-supply)
-- [Preamplifier](#preamplifier)
 - [STM32 Protection Controller](#stm32-protection-controller)
 - [Protection Logic](#protection-logic)
 - [Thermal Management](#thermal-management)
@@ -62,7 +56,6 @@ The repository covers the complete design-to-fabrication workflow:
 - [Bring-Up and Validation](#bring-up-and-validation)
 - [Safety](#safety)
 - [Design Tools](#design-tools)
-- [Project Status](#project-status)
 - [Reference Design and Credits](#reference-design-and-credits)
 - [Author](#author)
 
@@ -129,16 +122,10 @@ The repository covers the complete design-to-fabrication workflow:
 | Audio inputs | RCA |
 | Speaker outputs | Gold-plated binding terminals |
 | PCB CAD | KiCad |
-| Hardware design state | **Complete** |
-| Firmware state | **Complete** |
-| BOM / sourcing state | **Complete** |
-| Manufacturing package | **Complete** |
 
-### Completion and Validation Scope
+### Validation Scope
 
-The repository is presented as a completed engineering project and release package. Completion includes the electrical design, PCB implementation, protection firmware, finalized BOM rules, component substitutions, manufacturing outputs, and documented bring-up procedure.
-
-The README deliberately separates **project completion** from **measured audio characterization**. Values such as output power, THD, frequency response, signal-to-noise ratio, and thermal rise should only be published together with the exact load, signal level, test equipment, and measurement conditions.
+The README deliberately separates the documented design from **measured audio characterization**. Values such as output power, THD, frequency response, signal-to-noise ratio, and thermal rise should only be published together with the exact load, signal level, test equipment, and measurement conditions.
 
 ---
 
@@ -275,14 +262,6 @@ The high-current supply uses heavy-current bridge rectification and large reserv
 - high-current speaker return paths kept away from input ground;
 - chassis protective earth bonded independently and securely;
 - appropriately rated mains fusing, switchgear, cable, and insulation.
-
----
-
-## Preamplifier
-
-The KiCad project also contains an **independent preamplifier schematic**. It is maintained as a separate functional block in the same project rather than being hard-wired into the power-amplifier PCB hierarchy.
-
-This keeps the power amplifier usable as a standalone line-level power stage while still allowing the preamplifier to be included in the complete enclosure when required.
 
 ---
 
@@ -536,7 +515,7 @@ The thermal system includes:
 
 Thermal compound, insulators, bushings, and mounting torque should be selected according to the actual output-device and heatsink installation.
 
-The thermal design is complete at the engineering level; numerical temperature-rise claims should be added only from controlled load testing with the final chassis and airflow arrangement.
+The thermal design includes the intended heatsink and airflow provisions; numerical temperature-rise claims should be added only from controlled load testing with the final chassis and airflow arrangement.
 
 ---
 
@@ -892,7 +871,7 @@ A complete bring-up and validation sequence is included as part of the engineeri
 
 The project documentation distinguishes between **functional validation** and **quantitative audio characterization**.
 
-The design and release package are complete. Functional and quantitative test results should be recorded against the documented procedure so that later published performance figures remain traceable to real measurements.
+Functional and quantitative test results should be recorded against the documented procedure so that later published performance figures remain traceable to real measurements.
 
 Precise audio-performance figures should be reported only with documented test equipment, load impedance, signal conditions, and measurement methodology.
 
@@ -935,37 +914,6 @@ The project workflow uses:
 
 ---
 
-## Project Status
-
-The repository is maintained as the **completed engineering release** of the amplifier project.
-
-| Area | Status |
-|---|---|
-| Power-amplifier schematic | **Complete** |
-| Power-supply architecture | **Complete** |
-| Preamplifier schematic | **Complete** |
-| STM32 protection-controller hardware | **Complete** |
-| STM32 protection firmware | **Complete** |
-| DC and temperature sensing | **Complete** |
-| Speaker relay drivers | **Complete** |
-| Component selection | **Complete** |
-| Final transistor substitution | **Complete** |
-| Final resistor power-rating revision | **Complete** |
-| Footprint assignment | **Complete** |
-| PCB layout | **Complete** |
-| Grounding implementation | **Complete** |
-| Mechanical integration plan | **Complete** |
-| BOM / Mouser sourcing files | **Complete** |
-| Gerber generation | **Complete** |
-| PTH / NPTH drill generation | **Complete** |
-| Manufacturing documentation | **Complete** |
-| Firmware source organization | **Complete** |
-| Bring-up / measurement procedure | **Complete** |
-| GitHub project documentation | **Complete** |
-
-The repository therefore represents a finished engineering package that can be reviewed, manufactured, assembled, programmed, and measured without requiring further schematic or PCB-design work.
-
----
 
 ## Reference Design and Credits
 
@@ -993,7 +941,7 @@ This repository documents a broader implementation built around that amplifier c
 
 ## Engineering Goals
 
-The completed project implements the following engineering objectives:
+The project implements the following engineering objectives:
 
 - reliable discrete Class‑AB amplification;
 - loudspeaker protection;
@@ -1020,8 +968,8 @@ Designed in **KiCad**.
 
 <div align="center">
 
-### Hi‑Fi Power Amplifier · Complete Engineering Release
+### Hi‑Fi Power Amplifier · Engineering Project
 
-*Completed design release covering amplifier electronics, dual-transformer power, PCB manufacturing, STM32 protection firmware, BOM control, thermal management, and validation procedures.*
+*Design documentation covering amplifier electronics, dual-transformer power, PCB manufacturing, STM32 protection firmware, BOM control, thermal management, and validation procedures.*
 
 </div>
