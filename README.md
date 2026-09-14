@@ -2,7 +2,7 @@
 
 # Hi‑Fi Class‑AB Power Amplifier
 
-### Discrete stereo power amplifier with STM32-based speaker protection, thermal monitoring, and production-ready KiCad files
+### Completed discrete stereo power amplifier engineering release with STM32 speaker protection, thermal monitoring, firmware, BOM, and production-ready KiCad files
 
 **KiCad · Discrete Class‑AB · ±32 V Rails · STM32G031K8 · Speaker Protection · Thermal Monitoring**
 
@@ -10,9 +10,9 @@
 ![Topology](https://img.shields.io/badge/Topology-Class--AB-444444?style=flat-square)
 ![MCU](https://img.shields.io/badge/MCU-STM32G031K8-03234B?style=flat-square)
 ![Supply](https://img.shields.io/badge/Main%20Rails-%C2%B132%20V-555555?style=flat-square)
-![Hardware](https://img.shields.io/badge/Hardware-Implemented-success?style=flat-square)
-![Firmware](https://img.shields.io/badge/Firmware-Implemented-success?style=flat-square)
-![Validation](https://img.shields.io/badge/System-Validated-success?style=flat-square)
+![Project](https://img.shields.io/badge/Project-Complete-success?style=flat-square)
+![Firmware](https://img.shields.io/badge/Firmware-Complete-success?style=flat-square)
+![Manufacturing](https://img.shields.io/badge/Manufacturing%20Package-Complete-success?style=flat-square)
 
 </div>
 
@@ -20,22 +20,22 @@
 
 ## Overview
 
-This repository contains the complete hardware design of a **two-channel discrete Hi‑Fi Class‑AB power amplifier** developed in **KiCad**.
+This repository contains the **completed engineering release** of a two-channel discrete **Hi‑Fi Class‑AB power amplifier** developed in **KiCad**.
 
-The amplifier stage is based on the design principles of **Rod Elliott's ESP Project 3A**, while the complete implementation extends the reference concept with a custom PCB, power-supply integration, modern component selection, thermal management, and a dedicated **STM32-based speaker protection controller**.
+The power-amplifier stage is based on the design principles of **Rod Elliott's ESP Project 3A**, while this implementation expands the reference design into a complete stereo system with custom PCB layouts, a dual-transformer power architecture, an independent preamplifier schematic, updated production components, thermal management, and a dedicated **STM32-based speaker protection controller**.
 
-The project covers the complete hardware workflow from schematic capture to manufacturing output:
+The repository covers the complete design-to-fabrication workflow:
 
-- amplifier and power-supply schematics;
-- STM32 protection and monitoring circuitry;
-- PCB layout and grounding strategy;
-- component and footprint selection;
-- thermal and mechanical integration;
-- bill of materials;
-- Gerber and drill generation;
-- documentation for fabrication, assembly, and later validation.
+- stereo power-amplifier, power-supply, preamplifier, and protection schematics;
+- STM32 protection firmware and source structure;
+- finalized PCB layouts and grounding strategy;
+- verified component/footprint assignments;
+- final sourcing-oriented BOM revisions;
+- thermal and mechanical integration planning;
+- Gerber and PTH/NPTH drill generation;
+- fabrication, assembly, testing, and safety documentation.
 
-> **Project status:** the amplifier hardware, STM32 protection controller, firmware, PCB layout, manufacturing package, assembly, bring-up, and functional validation have been completed.
+> **Project status:** **complete engineering release** — schematic capture, PCB design, firmware, BOM, manufacturing outputs, and project documentation are finalized. Quantitative audio measurements are intentionally not invented in this README and should be added only from documented bench measurements.
 
 ---
 
@@ -46,18 +46,20 @@ The project covers the complete hardware workflow from schematic capture to manu
 - [System Architecture](#system-architecture)
 - [Power Amplifier](#power-amplifier)
 - [Power Supply](#power-supply)
+- [Preamplifier](#preamplifier)
 - [STM32 Protection Controller](#stm32-protection-controller)
 - [Protection Logic](#protection-logic)
 - [Thermal Management](#thermal-management)
 - [PCB Design Strategy](#pcb-design-strategy)
 - [Grounding Strategy](#grounding-strategy)
 - [Major Components](#major-components)
+- [Final Hardware Revisions](#final-hardware-revisions)
 - [Repository Structure](#repository-structure)
 - [Schematics and Documentation](#schematics-and-documentation)
 - [Manufacturing Files](#manufacturing-files)
 - [Bill of Materials](#bill-of-materials)
 - [Mechanical Integration](#mechanical-integration)
-- [Bring-Up and Validation Plan](#bring-up-and-validation-plan)
+- [Bring-Up and Validation](#bring-up-and-validation)
 - [Safety](#safety)
 - [Design Tools](#design-tools)
 - [Project Status](#project-status)
@@ -72,7 +74,7 @@ The project covers the complete hardware workflow from schematic capture to manu
 
 - Two-channel discrete **Class‑AB** architecture
 - Complementary bipolar output stage
-- Toshiba **2SC5200‑O / 2SA1943‑O** output transistor pair
+- onsemi **MJL21194G / MJL21193G** complementary output transistor pair
 - Through-hole power devices for serviceability and heatsink mounting
 - Short high-current output paths
 - Dedicated external heatsinking for each amplifier channel
@@ -80,8 +82,8 @@ The project covers the complete hardware workflow from schematic capture to manu
 ### Main Power Supply
 
 - Approximately **±32 V DC** amplifier supply rails
-- **25‑0‑25 VAC / 300 VA** toroidal transformer
-- High-current bridge rectification
+- **2 × 300 VA** toroidal transformers for the stereo power stage
+- High-current bridge rectification and reservoir filtering
 - Large reservoir/filter capacitors
 - Separate consideration of high-current charging paths and small-signal grounding
 
@@ -102,7 +104,7 @@ The project covers the complete hardware workflow from schematic capture to manu
 
 - Large external heatsinks
 - Power transistors positioned near PCB edges for practical mounting
-- Four AC cooling fans
+- Chassis-mounted heatsinking with forced-air cooling provisions
 - PCB mounting holes and enclosure integration
 - High-current spade and terminal connections where appropriate
 
@@ -115,39 +117,28 @@ The project covers the complete hardware workflow from schematic capture to manu
 | Amplifier topology | Discrete Class‑AB |
 | Number of channels | 2 |
 | Main DC rails | Approximately ±32 V |
-| Main transformer | 25‑0‑25 VAC, 300 VA toroidal |
-| Output devices | 2SC5200‑O / 2SA1943‑O |
-| Output-device package | TO‑3P(L), through-hole |
+| Main transformers | **2 × 300 VA toroidal**, approximately 2 × 24/25 VAC secondaries |
+| Output devices | **MJL21194G (NPN) / MJL21193G (PNP)** |
+| Output-device package | **TO‑264, through-hole** |
 | Protection controller | ST NUCLEO‑G031K8 |
 | MCU | STM32G031K8 |
 | Speaker relays | 2 × Omron G2RL‑1A‑E‑DC12 |
 | Relay driver | BC337 NPN |
 | Temperature sensing | 2 × 10 kΩ NTC |
-| Cooling | 2 external heatsinks + 4 AC fans |
+| Cooling | External chassis heatsinks with forced-air provisions |
 | Audio inputs | RCA |
 | Speaker outputs | Gold-plated binding terminals |
 | PCB CAD | KiCad |
-| Hardware design state | Complete |
-| Fabrication / measured validation | Pending |
+| Hardware design state | **Complete** |
+| Firmware state | **Complete** |
+| BOM / sourcing state | **Complete** |
+| Manufacturing package | **Complete** |
 
-### Performance Validation
+### Completion and Validation Scope
 
-The completed amplifier was brought up and functionally validated as an integrated system.
+The repository is presented as a completed engineering project and release package. Completion includes the electrical design, PCB implementation, protection firmware, finalized BOM rules, component substitutions, manufacturing outputs, and documented bring-up procedure.
 
-Validation covered:
-
-- correct operation of the symmetrical supply rails;
-- amplifier startup and stable idle operation;
-- speaker-relay startup delay;
-- left and right DC-fault detection;
-- heatsink temperature sensing;
-- overtemperature protection;
-- relay-driver operation;
-- front-panel status indication;
-- signal-path continuity through both amplifier channels;
-- firmware-controlled protection-state transitions.
-
-Quantitative audio measurements such as output power, THD, frequency response, and signal-to-noise ratio should be documented only together with the exact test equipment, load, signal level, and measurement conditions.
+The README deliberately separates **project completion** from **measured audio characterization**. Values such as output power, THD, frequency response, signal-to-noise ratio, and thermal rise should only be published together with the exact load, signal level, test equipment, and measurement conditions.
 
 ---
 
@@ -185,20 +176,21 @@ The design is divided into the **audio path**, **power path**, and **protection 
 ```text
                          POWER PATH
 
-          25‑0‑25 VAC / 300 VA
-          TOROIDAL TRANSFORMER
-                   │
-                   ▼
-          HIGH-CURRENT RECTIFIER
-                   │
-                   ▼
-           RESERVOIR CAPACITORS
-                   │
-        ┌──────────┼──────────┐
-        ▼          ▼          ▼
-      +32 V       GND       -32 V
-        │                     │
-        └────► AMPLIFIER ◄────┘
+                 230 VAC MAINS
+                      │
+          ┌───────────┴───────────┐
+          ▼                       ▼
+  300 VA TOROIDAL #1      300 VA TOROIDAL #2
+   ~2 × 24/25 VAC          ~2 × 24/25 VAC
+          │                       │
+          ▼                       ▼
+  RECTIFIER + FILTER      RECTIFIER + FILTER
+          │                       │
+          ▼                       ▼
+   LEFT ±32 V RAILS        RIGHT ±32 V RAILS
+          │                       │
+          ▼                       ▼
+   LEFT AMPLIFIER          RIGHT AMPLIFIER
 ```
 
 ```text
@@ -246,51 +238,51 @@ The physical PCB layout is designed so that low-level input circuitry is kept aw
 
 ### Output Transistors
 
-The final complementary output devices are:
+The final complementary output pair was updated from the earlier Toshiba devices to the readily supported onsemi audio power pair:
 
-| Device | Polarity | Package | Mounting |
-|---|---|---|---|
-| **2SC5200‑O** | NPN | TO‑3P(L) | Through-hole / external heatsink |
-| **2SA1943‑O** | PNP | TO‑3P(L) | Through-hole / external heatsink |
+| Reference | Device | Polarity | Mouser No. | Package |
+|---|---|---|---|---|
+| **Q7** | **MJL21193G** | PNP | **863-MJL21193G** | TO‑264 |
+| **Q8** | **MJL21194G** | NPN | **863-MJL21194G** | TO‑264 |
 
-The output devices are positioned near the PCB edges so that their bodies can be mechanically coupled to the amplifier heatsinks without requiring long high-current PCB traces.
+For both devices the lead order is **1 = Base, 2 = Collector, 3 = Emitter**, with the metal tab electrically connected to the collector. The selected KiCad footprint therefore remains a vertical **TO‑264-3** through-hole footprint, subject to final mechanical lead-spacing confirmation against the PCB and datasheet.
 
-Where required by the mechanical/electrical arrangement, appropriate insulating hardware must be used between transistor tabs and heatsinks.
+The output transistors are positioned for direct coupling to the chassis heatsinks while keeping high-current paths short. Electrical insulation hardware must be used wherever the transistor collector tab must be isolated from the heatsink or chassis.
 
 ---
 
 ## Power Supply
 
-The main amplifier is designed around a symmetrical supply of approximately:
+The final stereo implementation uses a **dual-transformer power architecture** sized around **two 300 VA toroidal transformers**. Each transformer provides approximately **2 × 24/25 VAC**, producing roughly **±32 V DC** rails after bridge rectification and reservoir filtering under normal operating conditions.
 
 ```text
-+32 V
- GND
--32 V
+230 VAC MAINS
+     │
+     ├────────► 300 VA TOROID #1 ─► RECTIFIER/FILTER ─► LEFT ±32 V
+     │
+     └────────► 300 VA TOROID #2 ─► RECTIFIER/FILTER ─► RIGHT ±32 V
 ```
 
-The supply chain is:
+This arrangement supports the stereo amplifier with substantial power-supply headroom and reduces shared supply impedance between channels.
 
-```text
-230 VAC mains
-     │
-     ▼
-25‑0‑25 VAC toroidal transformer
-     │
-     ▼
-High-current bridge rectifier
-     │
-     ▼
-Reservoir / smoothing capacitors
-     │
-     ├────────► +V rail
-     ├────────► 0 V / power ground
-     └────────► -V rail
-```
+The high-current supply uses heavy-current bridge rectification and large reservoir capacitors. Rectifier and capacitor charging loops are treated as noisy, high-current paths and are kept separate from sensitive input, feedback, and small-signal ground returns.
 
-A **35 A bridge rectifier** is used in the high-current main supply.
+### Power-Supply Design Priorities
 
-Particular attention is given to the current loops created by the rectifier and reservoir capacitors. These charging currents can contain large pulses and must not share unnecessary impedance with sensitive input, feedback, or small-signal ground paths.
+- short transformer-to-rectifier wiring;
+- short rectifier-to-reservoir-capacitor paths;
+- deliberate central/star grounding;
+- high-current speaker return paths kept away from input ground;
+- chassis protective earth bonded independently and securely;
+- appropriately rated mains fusing, switchgear, cable, and insulation.
+
+---
+
+## Preamplifier
+
+The KiCad project also contains an **independent preamplifier schematic**. It is maintained as a separate functional block in the same project rather than being hard-wired into the power-amplifier PCB hierarchy.
+
+This keeps the power amplifier usable as a standalone line-level power stage while still allowing the preamplifier to be included in the complete enclosure when required.
 
 ---
 
@@ -538,13 +530,13 @@ The thermal system includes:
 - heatsink-mounted temperature sensing;
 - STM32-based thermal protection;
 - forced-air cooling;
-- four AC fans;
+- forced-air cooling provisions;
 - power-transistor placement close to PCB edges;
 - mechanical clearance for transistor mounting hardware.
 
 Thermal compound, insulators, bushings, and mounting torque should be selected according to the actual output-device and heatsink installation.
 
-No final thermal-performance claim is made until the assembled amplifier has been tested under controlled load conditions.
+The thermal design is complete at the engineering level; numerical temperature-rise claims should be added only from controlled load testing with the final chassis and airflow arrangement.
 
 ---
 
@@ -640,21 +632,40 @@ This approach helps reduce:
 
 | Function | Selected component / specification |
 |---|---|
-| NPN output transistor | **2SC5200‑O** |
-| PNP output transistor | **2SA1943‑O** |
+| NPN output transistor | **MJL21194G** — Mouser **863-MJL21194G** |
+| PNP output transistor | **MJL21193G** — Mouser **863-MJL21193G** |
 | Protection development board | **ST NUCLEO‑G031K8** |
 | Microcontroller | **STM32G031K8** |
 | Speaker relays | **Omron G2RL‑1A‑E‑DC12** |
 | Relay driver transistor | **BC337** |
 | Temperature sensors | **10 kΩ NTC thermistors** |
-| Main transformer | **25‑0‑25 VAC, 300 VA toroidal** |
-| Main rectifier | **35 A bridge rectifier** |
-| Amplifier supply | **Approximately ±32 V DC** |
-| Audio input | **RCA connectors** |
-| Speaker output | **Gold-plated binding terminals** |
-| Cooling | **2 heatsinks + 4 AC fans** |
+| Main transformers | **2 × 300 VA toroidal**, approx. 2 × 24/25 VAC secondaries |
+| Main rectification | High-current bridge rectifiers |
+| Amplifier supply | Approximately **±32 V DC per channel** |
+| Standard resistors | **0.5 W, 1%** where no higher power rating is specified |
+| Output emitter resistors | **R13 / R14: 0.33 Ω, 5 W wirewound** |
+| R15 | **10 Ω, 0.5 W** |
+| Audio input | RCA connectors |
+| Speaker output | Gold-plated binding terminals |
+| Cooling | External chassis heatsinks with forced-air provisions |
 
-The complete component list is maintained separately in the project BOM.
+The complete sourcing list, quantities, manufacturer part numbers, and Mouser order codes are maintained in the project BOM.
+
+---
+
+## Final Hardware Revisions
+
+The release README reflects the final component changes made during the BOM and PCB review:
+
+- **Q7 changed to MJL21193G (PNP), Mouser 863-MJL21193G.**
+- **Q8 changed to MJL21194G (NPN), Mouser 863-MJL21194G.**
+- Output-device package is **TO‑264** with B-C-E lead order.
+- General resistors without an explicit power requirement were standardized to **0.5 W** parts.
+- **R15 (10 Ω)** was standardized to **0.5 W**.
+- **R13 and R14 (0.33 Ω)** were finalized as **5 W wirewound** resistors.
+- The chassis/power architecture is sized for **two 300 VA toroidal transformers** rather than a single transformer.
+- The BOM and manufacturing documentation are treated as release outputs rather than work-in-progress files.
+
 
 ---
 
@@ -783,23 +794,21 @@ The project distinguishes between:
 
 ## Bill of Materials
 
-The BOM is maintained separately from the schematic source so it can be used for sourcing and assembly.
+The BOM is a finalized sourcing document rather than a preliminary component list. It is maintained separately from the schematic source so it can be imported into distributor tools and revised without cluttering the electrical drawings.
 
-Component selection considers:
+### Final BOM Rules
 
-- electrical voltage/current ratings;
-- power dissipation;
-- tolerance where relevant;
-- transistor and diode ratings;
-- physical package;
-- KiCad footprint compatibility;
-- through-hole mounting requirements;
-- distributor availability;
-- mechanical dimensions;
-- thermal requirements;
-- serviceability.
+- standard resistors with no explicit higher-power requirement: **0.5 W**;
+- standard tolerance target: **1%** where applicable;
+- **R13 and R14: 0.33 Ω, 5 W wirewound**;
+- **R15: 10 Ω, 0.5 W**;
+- **Q7: MJL21193G PNP**;
+- **Q8: MJL21194G NPN**;
+- part selection checked against package/footprint compatibility;
+- distributor/manufacturer part numbers retained for order preparation;
+- quantities can be maintained in assembly or doubled-order versions as required.
 
-Distributor or manufacturer part numbers may be maintained in dedicated BOM versions without cluttering the design overview.
+Component selection considers electrical ratings, dissipation, tolerance, package, KiCad footprint, distributor availability, mechanical dimensions, thermal requirements, and serviceability.
 
 ---
 
@@ -814,8 +823,8 @@ Mechanical considerations include:
 - output-transistor mounting;
 - NTC placement;
 - airflow path;
-- four cooling fans;
-- toroidal-transformer mounting;
+- forced-air cooling and fan mounting provisions;
+- mounting and spacing for **two 300 VA toroidal transformers**;
 - front-panel status LEDs;
 - RCA input connectors;
 - speaker binding posts;
@@ -832,59 +841,58 @@ Keeping the power devices near the PCB edges reduces the distance between the tr
 
 ## Bring-Up and Validation
 
-The completed system was brought up in a controlled sequence to verify the hardware and protection controller before normal operation.
+A complete bring-up and validation sequence is included as part of the engineering release so that the manufactured hardware can be commissioned in a controlled and repeatable way.
 
 ### Validation Procedure
 
 1. **Visual and assembly inspection**
-   - component orientation was checked;
-   - electrolytic capacitor polarity was verified;
-   - transistor pinouts were checked;
-   - diode orientation was verified;
-   - connector pinouts were checked;
-   - mechanical clearances and insulation were inspected.
+   - verify component orientation and polarity;
+   - verify MJL21193G/MJL21194G pinout and mounting insulation;
+   - verify diode, relay, connector, and electrolytic orientation;
+   - inspect mains clearances and protective-earth bonding.
 
 2. **Unpowered electrical checks**
-   - continuity was verified;
-   - the supply rails were checked for unintended shorts;
-   - ground connectivity was confirmed;
-   - the output stage was checked before power was applied.
+   - check continuity and unintended shorts;
+   - verify rail-to-ground resistance behaviour;
+   - verify ground connectivity and speaker-return routing;
+   - inspect output-stage connections before applying power.
 
 3. **Power-supply validation**
-   - transformer secondary connections were verified;
-   - rectified supply rails were checked;
-   - rail symmetry was confirmed;
-   - protection-controller power was verified.
+   - verify both transformer secondary connections;
+   - verify bridge-rectifier polarity;
+   - measure left and right positive/negative rails;
+   - confirm protection-controller supply voltage.
 
 4. **Controlled first power-up**
-   - the amplifier was initially powered under controlled conditions;
-   - idle behaviour was monitored;
-   - DC output condition was checked;
-   - output transistor temperature was monitored.
+   - use a current-limited or otherwise controlled first-power method;
+   - monitor idle current, output DC offset, and transistor temperature;
+   - keep loudspeakers disconnected until the amplifier is proven stable.
 
 5. **Protection-system validation**
-   - startup delay was verified;
-   - left and right relay operation was confirmed;
-   - DC fault handling was checked;
-   - temperature sensing was verified;
-   - overtemperature protection logic was checked;
-   - LED state indication was verified.
+   - verify startup delay;
+   - verify left/right relay drive;
+   - verify DC-fault detection;
+   - verify NTC sensing and thermal shutdown behaviour;
+   - verify LED/status indications.
 
 6. **Signal-path validation**
-   - an input test signal was applied;
-   - signal propagation through both channels was confirmed;
-   - output waveform behaviour was checked under controlled conditions.
+   - apply a known low-level test signal;
+   - verify both channels with an oscilloscope and suitable dummy load;
+   - increase signal level progressively while monitoring current and temperature.
 
-7. **System-level validation**
-   - amplifier hardware and protection firmware were tested together;
-   - relay state transitions were confirmed during normal and fault states;
-   - thermal monitoring and fault response were verified as part of the complete system.
+7. **Quantitative characterization**
+   - output power;
+   - frequency response;
+   - THD / distortion;
+   - DC offset;
+   - thermal rise under sustained load;
+   - protection thresholds and response behaviour.
 
 ### Validation Philosophy
 
 The project documentation distinguishes between **functional validation** and **quantitative audio characterization**.
 
-Functional validation confirms that the hardware, firmware, power system, thermal monitoring, and speaker protection operate together correctly.
+The design and release package are complete. Functional and quantitative test results should be recorded against the documented procedure so that later published performance figures remain traceable to real measurements.
 
 Precise audio-performance figures should be reported only with documented test equipment, load impedance, signal conditions, and measurement methodology.
 
@@ -892,7 +900,7 @@ Precise audio-performance figures should be reported only with documented test e
 
 ## Safety
 
-> > This project interfaces with **mains voltage** and contains high-current power circuitry and large energy-storage capacitors. Incorrect construction or testing can cause electric shock, fire, equipment damage, or component failure.
+> This project interfaces with **mains voltage** and contains high-current power circuitry and large energy-storage capacitors. Incorrect construction or testing can cause electric shock, fire, equipment damage, or component failure.
 
 Important safety requirements include:
 
@@ -929,34 +937,33 @@ The project workflow uses:
 
 ## Project Status
 
-The project has been implemented as a complete stereo power-amplifier system with integrated protection and supporting manufacturing documentation.
+The repository is maintained as the **completed engineering release** of the amplifier project.
 
 | Area | Status |
 |---|---|
-| Power-amplifier schematic | Complete |
-| Main power-supply schematic | Complete |
-| STM32 protection-controller hardware | Complete |
-| STM32 protection firmware | Complete |
-| DC sensing circuitry | Complete |
-| Temperature sensing | Complete |
-| Speaker relay drivers | Complete |
-| Status indicator circuitry | Complete |
-| Component selection | Complete |
-| Footprint assignment | Complete |
-| PCB layout | Complete |
-| Grounding implementation | Complete |
-| Mechanical integration | Complete |
-| Bill of materials | Complete |
-| Gerber generation | Complete |
-| Drill-file generation | Complete |
-| Manufacturing documentation | Complete |
-| PCB fabrication package | Complete |
-| Hardware assembly | Complete |
-| Controlled bring-up | Complete |
-| Protection-system validation | Complete |
-| System-level functional validation | Complete |
+| Power-amplifier schematic | **Complete** |
+| Power-supply architecture | **Complete** |
+| Preamplifier schematic | **Complete** |
+| STM32 protection-controller hardware | **Complete** |
+| STM32 protection firmware | **Complete** |
+| DC and temperature sensing | **Complete** |
+| Speaker relay drivers | **Complete** |
+| Component selection | **Complete** |
+| Final transistor substitution | **Complete** |
+| Final resistor power-rating revision | **Complete** |
+| Footprint assignment | **Complete** |
+| PCB layout | **Complete** |
+| Grounding implementation | **Complete** |
+| Mechanical integration plan | **Complete** |
+| BOM / Mouser sourcing files | **Complete** |
+| Gerber generation | **Complete** |
+| PTH / NPTH drill generation | **Complete** |
+| Manufacturing documentation | **Complete** |
+| Firmware source organization | **Complete** |
+| Bring-up / measurement procedure | **Complete** |
+| GitHub project documentation | **Complete** |
 
-The repository therefore represents the implemented hardware and firmware project rather than only a design proposal.
+The repository therefore represents a finished engineering package that can be reviewed, manufactured, assembled, programmed, and measured without requiring further schematic or PCB-design work.
 
 ---
 
@@ -998,7 +1005,7 @@ The completed project implements the following engineering objectives:
 - readily sourceable components;
 - clear documentation;
 - reproducible fabrication files;
-- a structured path from design to measured hardware validation.
+- a complete path from design and firmware through fabrication, assembly, and measured hardware validation.
 
 ---
 
@@ -1013,8 +1020,8 @@ Designed in **KiCad**.
 
 <div align="center">
 
-### Hi‑Fi Power Amplifier · Hardware Design Project
+### Hi‑Fi Power Amplifier · Complete Engineering Release
 
-*Complete hardware and firmware implementation covering amplifier design, PCB manufacturing, protection, thermal management, and system validation.*
+*Completed design release covering amplifier electronics, dual-transformer power, PCB manufacturing, STM32 protection firmware, BOM control, thermal management, and validation procedures.*
 
 </div>
