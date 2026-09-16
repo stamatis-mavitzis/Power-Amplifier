@@ -97,7 +97,7 @@ The repository covers the complete design-to-fabrication workflow:
 
 - Large external heatsinks
 - Power transistors positioned near PCB edges for practical mounting
-- Chassis-mounted heatsinking with forced-air cooling provisions
+- Chassis-mounted heatsinking using passive natural-convection cooling
 - PCB mounting holes and enclosure integration
 - High-current spade and terminal connections where appropriate
 
@@ -118,7 +118,7 @@ The repository covers the complete design-to-fabrication workflow:
 | Speaker relays | 2 × Omron G2RL‑1A‑E‑DC12 |
 | Relay driver | BC337 NPN |
 | Temperature sensing | 2 × 10 kΩ NTC |
-| Cooling | External chassis heatsinks with forced-air provisions |
+| Cooling | External chassis heatsinks, passive natural-convection cooling |
 | Audio inputs | RCA |
 | Speaker outputs | Gold-plated binding terminals |
 | PCB CAD | KiCad |
@@ -508,8 +508,8 @@ The thermal system includes:
 - one large external heatsink per amplifier channel;
 - heatsink-mounted temperature sensing;
 - STM32-based thermal protection;
-- forced-air cooling;
-- forced-air cooling provisions;
+- **passive natural-convection cooling only**;
+- **no cooling fans are used**;
 - power-transistor placement close to PCB edges;
 - mechanical clearance for transistor mounting hardware.
 
@@ -626,7 +626,7 @@ This approach helps reduce:
 | R15 | **10 Ω, 0.5 W** |
 | Audio input | RCA connectors |
 | Speaker output | Gold-plated binding terminals |
-| Cooling | External chassis heatsinks with forced-air provisions |
+| Cooling | External chassis heatsinks, passive natural-convection cooling |
 
 The complete sourcing list, quantities, manufacturer part numbers, and Mouser order codes are maintained in the project BOM.
 
@@ -636,8 +636,8 @@ The complete sourcing list, quantities, manufacturer part numbers, and Mouser or
 
 The release README reflects the final component changes made during the BOM and PCB review:
 
-- **Q7 changed to MJL21193G (PNP), Mouser 863-MJL21193G.**
-- **Q8 changed to MJL21194G (NPN), Mouser 863-MJL21194G.**
+- The final output-transistor pair is **Q7: MJL21193G (PNP), Mouser 863-MJL21193G** and **Q8: MJL21194G (NPN), Mouser 863-MJL21194G**.
+- These onsemi TO-264 devices replace the earlier output-transistor selection.
 - Output-device package is **TO‑264** with B-C-E lead order.
 - General resistors without an explicit power requirement were standardized to **0.5 W** parts.
 - **R15 (10 Ω)** was standardized to **0.5 W**.
@@ -801,8 +801,8 @@ Mechanical considerations include:
 - amplifier heatsinks;
 - output-transistor mounting;
 - NTC placement;
-- airflow path;
-- forced-air cooling and fan mounting provisions;
+- passive airflow around the external heatsinks;
+- no cooling fans or fan-mounting provisions;
 - mounting and spacing for **two 300 VA toroidal transformers**;
 - front-panel status LEDs;
 - RCA input connectors;
