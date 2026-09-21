@@ -67,7 +67,7 @@ The repository covers the complete design-to-fabrication workflow:
 
 - Two-channel discrete **Class‑AB** architecture
 - Complementary bipolar output stage
-- **2SC5200-O / 2SA1943-O** complementary output transistor pair
+- **MJL21194G / MJL21193G** complementary output transistor pair
 - Through-hole power devices for serviceability and heatsink mounting
 - Short high-current output paths
 - Dedicated external heatsinking for each amplifier channel
@@ -111,8 +111,8 @@ The repository covers the complete design-to-fabrication workflow:
 | Number of channels | 2 |
 | Main DC rails | Approximately ±32 V |
 | Main transformers | **2 × 300 VA toroidal**, approximately 2 × 24/25 VAC secondaries |
-| Output devices | **2SC5200-O (NPN) / 2SA1943-O (PNP)** |
-| Output-device package | **TO‑3P, through-hole** |
+| Output devices | **MJL21194G (NPN) / MJL21193G (PNP)** |
+| Output-device package | **TO‑264, through-hole** |
 | Protection controller | ST NUCLEO‑G031K8 |
 | MCU | STM32G031K8 |
 | Speaker relays | 2 × Omron G2RL‑1A‑E‑DC12 |
@@ -229,10 +229,10 @@ The final complementary output pair used in the amplifier is:
 
 | Reference | Device | Polarity | Package |
 |---|---|---|---|
-| **Q7** | **2SA1943-O** | PNP | TO-3P |
-| **Q8** | **2SC5200-O** | NPN | TO-3P |
+| **Q7** | **MJL21193G** | PNP | TO-264 |
+| **Q8** | **MJL21194G** | NPN | TO-264 |
 
-The devices are mounted using vertical **TO-3P through-hole** footprints and are positioned near the PCB edge for direct mounting to the external chassis heatsinks. Appropriate thermal interface material and electrical insulation must be used where required.
+The devices are mounted using vertical **TO-264 through-hole** footprints and are positioned near the PCB edge for direct mounting to the external chassis heatsinks. Appropriate thermal interface material and electrical insulation must be used where required.
 
 
 ---
@@ -610,8 +610,8 @@ This approach helps reduce:
 
 | Function | Selected component / specification |
 |---|---|
-| NPN output transistor | **2SC5200-O** |
-| PNP output transistor | **2SA1943-O** |
+| NPN output transistor | **MJL21194G** (Mouser **863-MJL21194G**) |
+| PNP output transistor | **MJL21193G** (Mouser **863-MJL21193G**) |
 | Protection development board | **ST NUCLEO‑G031K8** |
 | Microcontroller | **STM32G031K8** |
 | Speaker relays | **Omron G2RL‑1A‑E‑DC12** |
@@ -635,9 +635,9 @@ The complete sourcing list, quantities, manufacturer part numbers, and Mouser or
 
 The release README reflects the final component changes made during the BOM and PCB review:
 
-- The final output-transistor pair is **Q7: 2SA1943-O (PNP)** and **Q8: 2SC5200-O (NPN)**.
-- Both output devices use **TO-3P through-hole** packages.
-- Output-device package is **TO‑3P** with B-C-E lead order.
+- The final output-transistor pair is **Q7: MJL21193G (PNP)** and **Q8: MJL21194G (NPN)**.
+- Both output devices use **TO-264 through-hole** packages.
+- Output-device package is **TO‑264** with B-C-E lead order.
 - General resistors without an explicit power requirement were standardized to **0.5 W** parts.
 - **R15 (10 Ω)** was standardized to **0.5 W**.
 - **R13 and R14 (0.33 Ω)** were finalized as **5 W wirewound** resistors.
@@ -780,8 +780,8 @@ The BOM is a finalized sourcing document rather than a preliminary component lis
 - standard tolerance target: **1%** where applicable;
 - **R13 and R14: 0.33 Ω, 5 W wirewound**;
 - **R15: 10 Ω, 0.5 W**;
-- **Q7: 2SA1943-O PNP**;
-- **Q8: 2SC5200-O NPN**;
+- **Q7: MJL21193G PNP** — Mouser **863-MJL21193G**;
+- **Q8: MJL21194G NPN** — Mouser **863-MJL21194G**;
 - part selection checked against package/footprint compatibility;
 - distributor/manufacturer part numbers retained for order preparation;
 - quantities can be maintained in assembly or doubled-order versions as required.
@@ -825,7 +825,7 @@ A complete bring-up and validation sequence is included as part of the engineeri
 
 1. **Visual and assembly inspection**
    - verify component orientation and polarity;
-   - verify 2SA1943-O / 2SC5200-O pinout, footprint, and mounting insulation;
+   - verify MJL21193G / MJL21194G pinout, TO-264 footprint, and mounting insulation;
    - verify diode, relay, connector, and electrolytic orientation;
    - inspect mains clearances and protective-earth bonding.
 
